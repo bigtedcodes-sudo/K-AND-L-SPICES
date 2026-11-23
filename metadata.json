@@ -1,0 +1,8 @@
+{
+  "name": "K-and-L-Sites",
+  "description": "Boutique West African culinary purveyor featuring stone-milled native seasonings, kinetic rotating spice stage, and direct WhatsApp order conversion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

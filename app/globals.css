@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-montserrat), system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    --brand-burgundy: #6b1713;
+    --deep-earth: #35160e;
+    --warm-parchment: #faf4e8;
+    --warm-sand: #f4ece0;
+    --delicate-border: #e7dac8;
+    --botanical-green: #2c5e3b;
+    --botanical-green-deep: #21482d;
+    --botanical-sage: #ebf2ec;
+  }
+
+  html, body {
+    background-color: #faf4e8;
+    color: #35160e;
+    font-family: var(--font-montserrat), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+    max-width: 100vw;
+  }
+
+  h1, h2, h3, h4, .font-montserrat {
+    font-family: var(--font-montserrat), system-ui, sans-serif;
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-orbital {
+  animation: spinSlow 80s linear infinite;
+}
+
+/* Custom scrollbar for boutique culinary aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #faf4e8;
+}
+::-webkit-scrollbar-thumb {
+  background: #e7dac8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6b1713;
+}
