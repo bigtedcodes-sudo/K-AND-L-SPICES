@@ -37,7 +37,7 @@ export default function AboutOverviewPage() {
             >
               <Link
                 href={sub.href}
-                className="group h-full bg-[#F4ECE0]/70 hover:bg-[#FAF4E8] rounded-3xl p-7 border border-[#E7DAC8] hover:border-[#2C5E3B]/45 shadow-xs hover:shadow-lg transition-all flex flex-col justify-between"
+                className="group h-full bg-white hover:bg-[#FCF9F4] rounded-3xl p-7 border border-white/25 hover:border-[#A8D5B5] shadow-[0_16px_38px_-14px_rgba(0,0,0,0.34)] hover:shadow-[0_22px_48px_-14px_rgba(0,0,0,0.45)] transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">

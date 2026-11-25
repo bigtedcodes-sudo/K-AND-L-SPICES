@@ -27,11 +27,11 @@ export default function LearnAboutUsPage() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-7 space-y-5"
           >
-            <h2 className="font-montserrat text-2xl sm:text-3xl font-bold text-[#35160E] leading-snug">
+            <h2 className="font-montserrat text-2xl sm:text-3xl font-bold text-white leading-snug">
               {content.heroTitle}
             </h2>
             {content.paragraphs.map((para, idx) => (
-              <p key={idx} className="text-sm sm:text-base text-[#35160E]/85 leading-relaxed">
+              <p key={idx} className="text-sm sm:text-base text-white/85 leading-relaxed">
                 {para}
               </p>
             ))}
@@ -70,7 +70,7 @@ export default function LearnAboutUsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className="bg-[#F4ECE0]/70 rounded-2xl p-6 border border-[#E7DAC8] space-y-2.5"
+              className="bg-white rounded-2xl p-6 border border-white/25 shadow-md space-y-2.5"
             >
               <span className="inline-block px-2.5 py-1 rounded-lg bg-[#6B1713] text-[#FAF4E8] text-[10px] font-bold uppercase tracking-wider font-montserrat">
                 {m.year}
@@ -82,10 +82,10 @@ export default function LearnAboutUsPage() {
         </div>
 
         {/* Regional Nigerian Origin Footprint */}
-        <div className="bg-gradient-to-br from-[#1B4328] via-[#235333] to-[#193C24] text-[#FAF4E8] rounded-3xl p-6 sm:p-10 border border-[#2C5E3B] shadow-lg">
+        <div className="bg-white/10 backdrop-blur-md text-white rounded-3xl p-6 sm:p-10 border border-white/20 shadow-lg">
           <div className="flex items-center gap-2.5 mb-6">
             <Compass className="w-5 h-5 text-[#A8D5B5]" />
-            <h3 className="font-montserrat text-xl sm:text-2xl font-bold text-[#FAF4E8]">
+            <h3 className="font-montserrat text-xl sm:text-2xl font-bold text-white">
               {t.productModal.nativeOrigin} — Harvest Sourcing Map
             </h3>
           </div>
@@ -94,7 +94,7 @@ export default function LearnAboutUsPage() {
             {content.regionalFootprint.map((item) => (
               <div
                 key={item.region}
-                className="bg-[#FAF4E8] text-[#35160E] rounded-2xl p-4 border border-[#FAF4E8]/40 shadow-sm flex items-start gap-3"
+                className="bg-white text-[#35160E] rounded-2xl p-4 border border-white/30 shadow-sm flex items-start gap-3"
               >
                 <MapPin className="w-4 h-4 text-[#6B1713] shrink-0 mt-1" />
                 <div>

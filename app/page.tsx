@@ -18,7 +18,7 @@ export default function HomePage() {
   const [selectedProduct, setSelectedProduct] = useState<ProductSKU | null>(null);
 
   return (
-    <div className="min-h-screen bg-[#FAF4E8] text-[#35160E] flex flex-col font-sans selection:bg-[#6B1713] selection:text-[#FAF4E8] overflow-x-clip">
+    <div className="min-h-screen bg-gradient-to-b from-[#173A22] via-[#215231] to-[#14321D] text-white flex flex-col font-sans selection:bg-[#6B1713] selection:text-white overflow-x-clip">
       {/* Navigation */}
       <Navbar />
 

@@ -111,7 +111,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-[#FAF4E8] text-[#35160E] min-h-screen antialiased selection:bg-[#6B1713] selection:text-[#FAF4E8]" suppressHydrationWarning>
+      <body className="bg-gradient-to-b from-[#173A22] via-[#215231] to-[#14321D] text-white min-h-screen antialiased selection:bg-[#6B1713] selection:text-white" suppressHydrationWarning>
         <Providers>{children}</Providers>
       </body>
     </html>

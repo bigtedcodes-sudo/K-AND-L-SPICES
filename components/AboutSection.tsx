@@ -20,11 +20,11 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="py-20 md:py-28 bg-white border-t border-[#E7DAC8] relative overflow-x-clip"
+      className="py-20 md:py-28 bg-transparent border-t border-white/12 relative overflow-x-clip"
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-24 left-1/4 w-80 h-80 rounded-full bg-[#2C5E3B]/8 blur-3xl"
+        className="pointer-events-none absolute -top-24 left-1/4 w-80 h-80 rounded-full bg-white/5 blur-3xl"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -36,13 +36,13 @@ export function AboutSection() {
           transition={{ duration: 0.55 }}
           className="text-center max-w-3xl mx-auto mb-12 sm:mb-16"
         >
-          <span className="text-xs uppercase tracking-widest text-[#6B1713] font-bold font-montserrat block mb-2">
+          <span className="text-xs uppercase tracking-widest text-[#A8D5B5] font-bold font-montserrat block mb-2">
             {t.about.kicker}
           </span>
-          <h2 className="font-montserrat text-3xl sm:text-4xl font-bold text-[#35160E] tracking-tight">
+          <h2 className="font-montserrat text-3xl sm:text-4xl font-bold text-white tracking-tight">
             {t.about.title}
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-[#35160E]/80 leading-relaxed">
+          <p className="mt-3 text-sm sm:text-base text-white/80 leading-relaxed">
             {t.about.subtitle}
           </p>
         </motion.div>
@@ -65,7 +65,7 @@ export function AboutSection() {
               >
                 <Link
                   href={sub.href}
-                  className="h-full bg-[#FAF4E8] rounded-3xl p-6 border border-[#E7DAC8] shadow-xs hover:shadow-lg hover:border-[#2C5E3B]/45 transition-all duration-300 flex flex-col justify-between"
+                  className="h-full bg-white rounded-3xl p-6 border border-white/25 shadow-[0_16px_38px_-14px_rgba(0,0,0,0.34)] hover:shadow-[0_22px_48px_-14px_rgba(0,0,0,0.45)] hover:border-[#A8D5B5] transition-all duration-300 flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-5">

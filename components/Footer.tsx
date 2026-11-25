@@ -18,7 +18,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#FAF4E8] border-t border-[#E7DAC8] text-[#35160E] py-14">
+    <footer className="bg-black/20 border-t border-white/15 text-white py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
           {/* Brand info */}
@@ -27,21 +27,21 @@ export function Footer() {
               href="/"
               className="inline-flex items-center gap-3 group"
             >
-              <BrandLogo size="lg" className="group-hover:scale-105" />
-              <span className="font-montserrat text-2xl font-bold tracking-widest text-[#35160E] group-hover:text-[#6B1713] transition-colors">
+              <BrandLogo size="lg" onDarkSurface className="group-hover:scale-105" />
+              <span className="font-montserrat text-2xl font-bold tracking-widest text-white group-hover:text-[#A8D5B5] transition-colors">
                 SPICES
               </span>
             </Link>
-            <p className="text-xs sm:text-sm text-[#35160E]/75 leading-relaxed max-w-sm">
+            <p className="text-xs sm:text-sm text-white/80 leading-relaxed max-w-sm">
               {t.footer.description}
             </p>
-            <div className="text-xs text-[#35160E]/80 space-y-1.5 pt-2">
+            <div className="text-xs text-white/85 space-y-1.5 pt-2">
               <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-[#6B1713]" />
+                <Phone className="w-3.5 h-3.5 text-[#A8D5B5]" />
                 <span>{t.footer.deskLabel}: {DISPLAY_PHONE_NUMBER}</span>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-[#6B1713]" />
+                <MapPin className="w-3.5 h-3.5 text-[#A8D5B5]" />
                 <span>{t.footer.facilityLabel}</span>
               </div>
             </div>
@@ -49,32 +49,32 @@ export function Footer() {
 
           {/* Quick Nav */}
           <div className="md:col-span-2 space-y-3">
-            <h4 className="font-montserrat text-xs font-bold uppercase tracking-wider text-[#6B1713]">
+            <h4 className="font-montserrat text-xs font-bold uppercase tracking-wider text-[#A8D5B5]">
               {t.footer.navHeading}
             </h4>
-            <ul className="text-xs space-y-2 text-[#35160E]/80 font-medium">
+            <ul className="text-xs space-y-2 text-white/80 font-medium">
               <li>
-                <Link href="/#tasting-stage" className="hover:text-[#2C5E3B] transition-colors">
+                <Link href="/#tasting-stage" className="hover:text-white transition-colors">
                   {t.nav.tastingStage}
                 </Link>
               </li>
               <li>
-                <Link href="/#catalog" className="hover:text-[#2C5E3B] transition-colors">
+                <Link href="/#catalog" className="hover:text-white transition-colors">
                   {t.nav.catalog}
                 </Link>
               </li>
               <li>
-                <Link href="/media" className="hover:text-[#2C5E3B] transition-colors">
+                <Link href="/media" className="hover:text-white transition-colors">
                   {t.nav.media}
                 </Link>
               </li>
               <li>
-                <Link href="/#heritage" className="hover:text-[#2C5E3B] transition-colors">
+                <Link href="/#heritage" className="hover:text-white transition-colors">
                   {t.nav.heritage}
                 </Link>
               </li>
               <li>
-                <Link href="/#wholesale" className="hover:text-[#2C5E3B] transition-colors">
+                <Link href="/#wholesale" className="hover:text-white transition-colors">
                   {t.nav.wholesale}
                 </Link>
               </li>
@@ -83,13 +83,13 @@ export function Footer() {
 
           {/* About & Governance Sub-Pages */}
           <div className="md:col-span-2 space-y-3">
-            <h4 className="font-montserrat text-xs font-bold uppercase tracking-wider text-[#6B1713]">
+            <h4 className="font-montserrat text-xs font-bold uppercase tracking-wider text-[#A8D5B5]">
               {t.nav.about}
             </h4>
-            <ul className="text-xs space-y-2 text-[#35160E]/80 font-medium">
+            <ul className="text-xs space-y-2 text-white/80 font-medium">
               {ABOUT_SUBPAGES.map((sub) => (
                 <li key={sub.slug}>
-                  <Link href={sub.href} className="hover:text-[#2C5E3B] transition-colors">
+                  <Link href={sub.href} className="hover:text-white transition-colors">
                     {t.about[sub.key]}
                   </Link>
                 </li>
@@ -99,38 +99,38 @@ export function Footer() {
 
           {/* Commercial Tiers */}
           <div className="md:col-span-4 space-y-3">
-            <h4 className="font-montserrat text-xs font-bold uppercase tracking-wider text-[#6B1713]">
+            <h4 className="font-montserrat text-xs font-bold uppercase tracking-wider text-[#A8D5B5]">
               {t.footer.tiersHeading}
             </h4>
-            <div className="text-xs text-[#35160E]/75 space-y-2">
+            <div className="text-xs text-white/80 space-y-2">
               <div>
-                <strong className="text-[#35160E] block">{t.footer.tier1Title}</strong>
+                <strong className="text-white block">{t.footer.tier1Title}</strong>
                 <span>{t.footer.tier1Desc}</span>
               </div>
               <div>
-                <strong className="text-[#35160E] block">{t.footer.tier2Title}</strong>
+                <strong className="text-white block">{t.footer.tier2Title}</strong>
                 <span>{t.footer.tier2Desc}</span>
               </div>
               <div>
-                <strong className="text-[#35160E] block">{t.footer.tier3Title}</strong>
+                <strong className="text-white block">{t.footer.tier3Title}</strong>
                 <span>{t.footer.tier3Desc}</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom bar with Language Switcher */}
-        <div className="pt-8 border-t border-[#E7DAC8] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#35160E]/60">
-          <div className="flex items-center gap-4">
+        {/* Bottom bar with Language & Currency Switchers */}
+        <div className="pt-8 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/75">
+          <div className="flex flex-wrap items-center gap-4">
             <p suppressHydrationWarning>© {new Date().getFullYear()} K&amp;L Spices. {t.footer.rights}</p>
-            <div className="hidden sm:flex items-center gap-2">
+            <div className="hidden sm:flex items-center gap-2 bg-white/95 rounded-xl px-2 py-1 shadow-xs">
               <CurrencySwitcher variant="dropdown" />
               <LanguageSwitcher variant="segmented" />
             </div>
           </div>
           <button
             onClick={scrollToTop}
-            className="inline-flex items-center gap-1.5 hover:text-[#2C5E3B] transition-colors font-medium"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#6B1713] text-white hover:bg-[#55120F] transition-colors font-semibold shadow-xs"
           >
             <span>{t.footer.backToTop}</span>
             <ArrowUp className="w-3.5 h-3.5" />

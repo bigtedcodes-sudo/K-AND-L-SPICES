@@ -53,7 +53,7 @@ export default async function ProductDetailPage({ params }: Props) {
   }
 
   return (
-    <div className="min-h-screen bg-white text-[#35160E] flex flex-col font-sans selection:bg-[#6B1713] selection:text-[#FAF4E8] overflow-x-clip">
+    <div className="min-h-screen bg-gradient-to-b from-[#173A22] via-[#215231] to-[#14321D] text-white flex flex-col font-sans selection:bg-[#6B1713] selection:text-[#FAF4E8] overflow-x-clip">
       <Navbar />
       <main className="flex-1">
         <ProductDetailClient product={product} />

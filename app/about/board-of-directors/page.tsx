@@ -24,7 +24,7 @@ export default function BoardOfDirectorsPage() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45 }}
-          className="bg-gradient-to-r from-[#1B4328] via-[#235333] to-[#193C24] text-[#FAF4E8] rounded-3xl p-6 sm:p-8 border border-[#2C5E3B] shadow-md flex flex-col md:flex-row items-start md:items-center gap-6"
+          className="bg-white/10 backdrop-blur-md text-white rounded-3xl p-6 sm:p-8 border border-white/20 shadow-lg flex flex-col md:flex-row items-start md:items-center gap-6"
         >
           <div className="w-12 h-12 rounded-2xl bg-[#6B1713] text-[#FAF4E8] flex items-center justify-center shrink-0 shadow-sm border border-[#FAF4E8]/20">
             <Landmark className="w-6 h-6" />
@@ -47,7 +47,7 @@ export default function BoardOfDirectorsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className="bg-[#FAF4E8] rounded-3xl p-6 sm:p-8 border border-[#E7DAC8] shadow-xs flex flex-col justify-between space-y-5"
+              className="bg-white rounded-3xl p-6 sm:p-8 border border-white/25 shadow-[0_16px_38px_-14px_rgba(0,0,0,0.34)] flex flex-col justify-between space-y-5"
             >
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -96,7 +96,7 @@ export default function BoardOfDirectorsPage() {
           {data.committees.map((committee) => (
             <div
               key={committee.name}
-              className="bg-[#F4ECE0]/60 rounded-2xl p-5 border border-[#E7DAC8] space-y-2"
+              className="bg-white rounded-2xl p-5 border border-white/25 shadow-md space-y-2"
             >
               <h3 className="font-montserrat text-sm font-bold text-[#6B1713]">
                 {committee.name}

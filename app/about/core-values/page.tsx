@@ -37,7 +37,7 @@ export default function CoreValuesPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: idx * 0.06 }}
-                className="bg-[#FAF4E8] rounded-3xl p-6 sm:p-7 border border-[#E7DAC8] shadow-xs flex flex-col justify-between space-y-5"
+                className="bg-white rounded-3xl p-6 sm:p-7 border border-white/25 shadow-[0_16px_38px_-14px_rgba(0,0,0,0.34)] flex flex-col justify-between space-y-5"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">

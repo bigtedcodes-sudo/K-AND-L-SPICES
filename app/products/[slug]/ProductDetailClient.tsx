@@ -72,7 +72,7 @@ export function ProductDetailClient({ product }: { product: ProductSKU }) {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-[#1B4328] via-[#245634] to-[#183B23] text-[#FAF4E8] py-10 sm:py-14 md:py-16 overflow-x-clip">
+    <section className="relative bg-transparent text-[#FAF4E8] py-10 sm:py-14 md:py-16 overflow-x-clip">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -top-24 left-1/3 w-96 h-96 rounded-full bg-[#FAF4E8]/8 blur-3xl"
@@ -134,7 +134,7 @@ export function ProductDetailClient({ product }: { product: ProductSKU }) {
             </div>
 
             {/* Sourcing & Provenance Card */}
-            <div className="p-6 rounded-2xl bg-[#FAF4E8] text-[#35160E] border border-[#FAF4E8]/40 shadow-md flex items-center justify-between">
+            <div className="p-6 rounded-2xl bg-white text-[#35160E] border border-white/25 shadow-lg flex items-center justify-between">
               <div>
                 <span className="text-[11px] text-[#35160E]/60 uppercase tracking-widest font-semibold block">
                   {t.productModal.nativeOrigin}
@@ -150,7 +150,7 @@ export function ProductDetailClient({ product }: { product: ProductSKU }) {
           </div>
 
           {/* Right Column: Sticky Contiguous Purchase Module */}
-          <div className="lg:col-span-5 bg-[#FAF4E8] text-[#35160E] rounded-3xl p-6 sm:p-8 border border-[#FAF4E8]/40 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.38)] space-y-6 lg:sticky lg:top-24">
+          <div className="lg:col-span-5 bg-white text-[#35160E] rounded-3xl p-6 sm:p-8 border border-white/25 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.42)] space-y-6 lg:sticky lg:top-24">
             <div>
               <span className="text-xs uppercase tracking-widest text-[#2C5E3B] font-bold font-montserrat block mb-1">
                 {localized.category}

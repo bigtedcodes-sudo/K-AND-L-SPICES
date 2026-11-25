@@ -61,16 +61,16 @@ export function BrandHeritage() {
     <section
       ref={sectionRef}
       id="heritage"
-      className="py-20 md:py-28 bg-[#FAF4E8] relative overflow-hidden"
+      className="py-20 md:py-28 bg-transparent border-t border-white/12 relative overflow-hidden"
     >
       {/* Ambient background kinetic lighting */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/4 right-0 w-96 h-96 rounded-full bg-[#E7DAC8]/40 blur-3xl"
+        className="pointer-events-none absolute top-1/4 right-0 w-96 h-96 rounded-full bg-white/5 blur-3xl"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-1/4 left-0 w-80 h-80 rounded-full bg-[#6B1713]/5 blur-3xl"
+        className="pointer-events-none absolute bottom-1/4 left-0 w-80 h-80 rounded-full bg-[#6B1713]/15 blur-3xl"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -85,30 +85,30 @@ export function BrandHeritage() {
             className="lg:col-span-5 space-y-6"
           >
             <div>
-              <span className="text-xs uppercase tracking-widest text-[#6B1713] font-bold font-montserrat block mb-2">
+              <span className="text-xs uppercase tracking-widest text-[#A8D5B5] font-bold font-montserrat block mb-2">
                 {t.heritage.kicker}
               </span>
-              <h2 className="font-montserrat text-3xl sm:text-4xl lg:text-5xl font-bold text-[#35160E] tracking-tight leading-tight">
+              <h2 className="font-montserrat text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
                 {t.heritage.title}
               </h2>
-              <p className="text-sm sm:text-base text-[#35160E]/80 leading-relaxed mt-4">
+              <p className="text-sm sm:text-base text-white/85 leading-relaxed mt-4">
                 {t.heritage.p1}
               </p>
-              <p className="text-sm sm:text-base text-[#35160E]/80 leading-relaxed mt-3">
+              <p className="text-sm sm:text-base text-white/85 leading-relaxed mt-3">
                 {t.heritage.p2}
               </p>
             </div>
 
             {/* Metrics Row */}
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-[#E7DAC8]">
+            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-white/20">
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                <span className="block font-montserrat text-2xl sm:text-3xl font-bold text-[#6B1713]">100%</span>
-                <span className="text-xs text-[#35160E]/70 font-medium">{t.heritage.metric1Label}</span>
+                <span className="block font-montserrat text-2xl sm:text-3xl font-bold text-white">100%</span>
+                <span className="text-xs text-[#A8D5B5] font-medium">{t.heritage.metric1Label}</span>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
@@ -116,8 +116,8 @@ export function BrandHeritage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                <span className="block font-montserrat text-2xl sm:text-3xl font-bold text-[#6B1713]">0%</span>
-                <span className="text-xs text-[#35160E]/70 font-medium">{t.heritage.metric2Label}</span>
+                <span className="block font-montserrat text-2xl sm:text-3xl font-bold text-white">0%</span>
+                <span className="text-xs text-[#A8D5B5] font-medium">{t.heritage.metric2Label}</span>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
@@ -125,8 +125,8 @@ export function BrandHeritage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                <span className="block font-montserrat text-2xl sm:text-3xl font-bold text-[#6B1713]">&lt;24h</span>
-                <span className="text-xs text-[#35160E]/70 font-medium">{t.heritage.metric3Label}</span>
+                <span className="block font-montserrat text-2xl sm:text-3xl font-bold text-white">&lt;24h</span>
+                <span className="text-xs text-[#A8D5B5] font-medium">{t.heritage.metric3Label}</span>
               </motion.div>
             </div>
           </motion.div>
@@ -226,10 +226,10 @@ export function BrandHeritage() {
                       damping: 20,
                       delay: 0.25 + idx * 0.15,
                     }}
-                    className="p-4 rounded-2xl bg-[#F4ECE0] border border-[#E7DAC8] hover:border-[#2C5E3B]/45 transition-all hover:bg-[#EBF2EC]/45 group shadow-xs"
+                    className="p-4 rounded-2xl bg-white border border-white/25 hover:border-[#A8D5B5] transition-all group shadow-md"
                   >
                     <div className="flex items-center justify-between mb-2">
-                      <div className="w-8 h-8 rounded-xl bg-[#FAF4E8] border border-[#E7DAC8] flex items-center justify-center text-[#2C5E3B] group-hover:bg-[#2C5E3B] group-hover:text-[#FAF4E8] transition-colors shadow-xs">
+                      <div className="w-8 h-8 rounded-xl bg-[#EBF2EC] border border-[#2C5E3B]/20 flex items-center justify-center text-[#2C5E3B] group-hover:bg-[#2C5E3B] group-hover:text-[#FAF4E8] transition-colors shadow-xs">
                         <StepIcon className="w-4 h-4" />
                       </div>
                       <span className="font-montserrat text-xs font-bold text-[#2C5E3B]/70">
@@ -257,23 +257,23 @@ export function BrandHeritage() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
           id="wholesale"
-          className="bg-gradient-to-br from-[#1B4328] via-[#235333] to-[#193C24] text-[#FAF4E8] rounded-3xl p-6 sm:p-12 border border-[#2C5E3B] shadow-xl"
+          className="bg-white/10 backdrop-blur-md text-white rounded-3xl p-6 sm:p-12 border border-white/20 shadow-xl"
         >
           <div className="max-w-3xl mx-auto text-center mb-8">
             <span className="text-xs uppercase tracking-widest text-[#A8D5B5] font-bold font-montserrat block mb-2">
               {t.heritage.b2bKicker}
             </span>
-            <h3 className="font-montserrat text-2xl sm:text-3xl font-bold text-[#FAF4E8]">
+            <h3 className="font-montserrat text-2xl sm:text-3xl font-bold text-white">
               {t.heritage.b2bTitle}
             </h3>
-            <p className="mt-2 text-sm text-[#FAF4E8]/85">
+            <p className="mt-2 text-sm text-white/85">
               {t.heritage.b2bDesc}
             </p>
           </div>
 
           <form
             onSubmit={handleB2BSubmit}
-            className="max-w-xl mx-auto bg-[#FAF4E8] text-[#35160E] rounded-2xl p-6 border border-[#FAF4E8]/40 shadow-lg space-y-4"
+            className="max-w-xl mx-auto bg-white text-[#35160E] rounded-2xl p-6 border border-white/30 shadow-lg space-y-4"
           >
             <div>
               <label

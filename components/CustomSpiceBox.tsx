@@ -154,31 +154,31 @@ export function CustomSpiceBox() {
   });
 
   return (
-    <section id="gift-box" className="py-20 md:py-28 bg-[#FAF4E8] relative overflow-x-clip border-t border-[#E7DAC8]">
+    <section id="gift-box" className="py-20 md:py-28 bg-transparent relative overflow-x-clip border-t border-white/12">
       {/* Ambient background glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[500px] rounded-full bg-[#E7DAC8]/30 blur-3xl"
+        className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[500px] rounded-full bg-white/5 blur-3xl"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[#E7DAC8] bg-[#F4ECE0] text-[#6B1713] text-xs font-semibold tracking-widest uppercase mb-3 font-montserrat">
-            <Gift className="w-3.5 h-3.5 text-[#6B1713]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-white/25 bg-white/12 text-[#A8D5B5] text-xs font-semibold tracking-widest uppercase mb-3 font-montserrat">
+            <Gift className="w-3.5 h-3.5 text-[#A8D5B5]" />
             <span>{t.customBox.kicker}</span>
           </div>
 
-          <h2 className="font-montserrat text-3xl sm:text-4xl lg:text-5xl font-bold text-[#35160E] tracking-tight leading-tight">
+          <h2 className="font-montserrat text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
             {t.customBox.title}
           </h2>
 
-          <p className="mt-3 text-sm sm:text-base text-[#35160E]/80 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-3 text-sm sm:text-base text-white/80 max-w-2xl mx-auto leading-relaxed">
             {t.customBox.subtitle}
           </p>
 
           {/* Box Size Toggle Pills */}
-          <div className="inline-flex items-center p-1.5 mt-8 bg-[#F4ECE0] rounded-2xl border border-[#E7DAC8] shadow-xs">
+          <div className="inline-flex items-center p-1.5 mt-8 bg-white/95 rounded-2xl border border-white/25 shadow-md">
             <button
               onClick={() => handleFormatChange('trio')}
               className={`relative px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all z-10 ${
@@ -217,7 +217,7 @@ export function CustomSpiceBox() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column: Visual Wooden Presentation Box Tray */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="bg-[#F4ECE0] rounded-3xl p-6 sm:p-8 border-2 border-[#E7DAC8] shadow-[0_15px_40px_-10px_rgba(53,22,14,0.12)] relative overflow-hidden">
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-white/25 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.38)] relative overflow-hidden">
               {/* Box Header & Pricing Line */}
               <div className="flex flex-wrap items-center justify-between gap-3 pb-6 border-b border-[#E7DAC8]">
                 <div>
@@ -348,7 +348,7 @@ export function CustomSpiceBox() {
               <button
                 onClick={handleAddToCart}
                 disabled={selectedSpices.length === 0}
-                className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-xl border border-[#2C5E3B]/35 bg-[#FAF4E8] hover:bg-[#2C5E3B] hover:text-[#FAF4E8] hover:border-[#2C5E3B] text-[#2C5E3B] text-xs font-semibold shadow-xs disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-xl border border-white/25 bg-white hover:bg-[#FCF9F4] text-[#2C5E3B] text-xs font-bold shadow-md disabled:opacity-50 disabled:cursor-not-allowed transition-all"
               >
                 {addedNotice ? (
                   <>
@@ -368,7 +368,7 @@ export function CustomSpiceBox() {
           {/* Right Column: Spice Picker & Personalized Calligraphy Card */}
           <div className="lg:col-span-6 space-y-6">
             {/* Spice Picker Tray */}
-            <div className="bg-[#FAF4E8] rounded-3xl p-6 sm:p-7 border border-[#E7DAC8] shadow-sm">
+            <div className="bg-white rounded-3xl p-6 sm:p-7 border border-white/25 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.34)]">
               <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                 <h4 className="font-montserrat text-base font-bold text-[#35160E]">
                   {t.customBox.chooseBlends}
@@ -442,7 +442,7 @@ export function CustomSpiceBox() {
             </div>
 
             {/* Personalized Calligraphy Card Input */}
-            <div className="bg-[#FAF4E8] rounded-3xl p-6 sm:p-7 border border-[#E7DAC8] shadow-sm space-y-4">
+            <div className="bg-white rounded-3xl p-6 sm:p-7 border border-white/25 shadow-[0_18px_45px_-15px_rgba(0,0,0,0.32)] space-y-4">
               <div className="flex items-center gap-2">
                 <Scroll className="w-4 h-4 text-[#6B1713]" />
                 <h4 className="font-montserrat text-sm sm:text-base font-bold text-[#35160E]">

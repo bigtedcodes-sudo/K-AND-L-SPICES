@@ -74,7 +74,7 @@ export function LuxuryHero() {
   return (
     <section
       id="tasting-stage"
-      className="relative overflow-hidden pt-8 pb-14 sm:pt-10 sm:pb-16 md:py-16 bg-gradient-to-br from-[#1B4328] via-[#245634] to-[#183B23] text-[#FAF4E8]"
+      className="relative overflow-hidden pt-8 pb-14 sm:pt-10 sm:pb-16 md:py-16 bg-transparent text-[#FAF4E8]"
     >
       {/* Subtle warm ambient illumination behind the kinetic platter */}
       <div

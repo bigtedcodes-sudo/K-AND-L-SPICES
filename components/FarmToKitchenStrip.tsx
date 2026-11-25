@@ -93,18 +93,18 @@ export function FarmToKitchenStrip() {
   return (
     <section
       aria-label={content.eyebrow}
-      className="bg-white border-y border-[#E7DAC8] py-7 sm:py-9"
+      className="bg-white/6 backdrop-blur-xs border-y border-white/15 py-7 sm:py-9 text-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-center gap-2 mb-5 sm:mb-6">
-          <span className="h-px w-6 sm:w-10 bg-[#2C5E3B]/35" aria-hidden="true" />
-          <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-[#2C5E3B] font-montserrat text-center">
+          <span className="h-px w-6 sm:w-10 bg-white/30" aria-hidden="true" />
+          <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-[#A8D5B5] font-montserrat text-center">
             {content.eyebrow}
           </p>
-          <span className="h-px w-6 sm:w-10 bg-[#2C5E3B]/35" aria-hidden="true" />
+          <span className="h-px w-6 sm:w-10 bg-white/30" aria-hidden="true" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-0 lg:divide-x lg:divide-[#E7DAC8]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-0 lg:divide-x lg:divide-white/15">
           {content.pillars.map((pillar, idx) => {
             const Icon = ICONS[idx];
             const isGreen = ACCENTS[idx] === 'green';
@@ -115,19 +115,19 @@ export function FarmToKitchenStrip() {
                 className="flex items-start gap-3.5 lg:px-6 first:lg:pl-0 last:lg:pr-0"
               >
                 <div
-                  className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 border ${
+                  className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow-sm ${
                     isGreen
-                      ? 'bg-[#EBF2EC] border-[#2C5E3B]/20 text-[#2C5E3B]'
-                      : 'bg-[#FAF4E8] border-[#6B1713]/20 text-[#6B1713]'
+                      ? 'bg-white text-[#2C5E3B]'
+                      : 'bg-[#6B1713] text-white border border-white/20'
                   }`}
                 >
                   <Icon className="w-4 h-4" />
                 </div>
                 <div className="min-w-0">
-                  <h3 className="font-montserrat text-xs sm:text-[13px] font-bold text-[#35160E] leading-snug">
+                  <h3 className="font-montserrat text-xs sm:text-[13px] font-bold text-white leading-snug">
                     {pillar.title}
                   </h3>
-                  <p className="text-[11px] sm:text-xs text-[#35160E]/70 leading-relaxed mt-0.5">
+                  <p className="text-[11px] sm:text-xs text-white/80 leading-relaxed mt-0.5">
                     {pillar.detail}
                   </p>
                 </div>

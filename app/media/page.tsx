@@ -104,14 +104,14 @@ export default function MediaAndKitchenPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-[#35160E] flex flex-col">
+    <div className="min-h-screen bg-gradient-to-b from-[#173A22] via-[#215231] to-[#14321D] text-white flex flex-col">
       <Navbar />
       <CartDrawer />
       <WhatsAppSimulator />
 
       <main className="flex-1">
-        {/* Hero Editorial Header — Deep Botanical Forest Green */}
-        <section className="relative py-14 sm:py-20 bg-gradient-to-br from-[#1B4328] via-[#245634] to-[#183B23] text-[#FAF4E8] border-b border-[#163620] overflow-hidden">
+        {/* Hero Editorial Header */}
+        <section className="relative py-14 sm:py-20 bg-transparent text-[#FAF4E8] border-b border-white/12 overflow-hidden">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute -top-24 right-0 w-96 h-96 rounded-full bg-[#FAF4E8]/8 blur-3xl"
@@ -163,18 +163,18 @@ export default function MediaAndKitchenPage() {
           </div>
         </section>
 
-        {/* SECTION 1: Vertical 15-Second Culinary & Milling Reels (Crisp White Canvas) */}
-        <section id="prep-reels" className="py-16 sm:py-20 bg-white">
+        {/* SECTION 1: Vertical 15-Second Culinary & Milling Reels */}
+        <section id="prep-reels" className="py-16 sm:py-20 bg-transparent">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
               <div>
-                <span className="text-xs uppercase tracking-widest text-[#2C5E3B] font-bold font-montserrat block mb-1.5">
+                <span className="text-xs uppercase tracking-widest text-[#A8D5B5] font-bold font-montserrat block mb-1.5">
                   Vertical Culinary Reels
                 </span>
-                <h2 className="font-montserrat text-2xl sm:text-3xl font-bold text-[#35160E]">
+                <h2 className="font-montserrat text-2xl sm:text-3xl font-bold text-white">
                   {t.media.reelsHeading}
                 </h2>
-                <p className="text-sm text-[#35160E]/75 mt-1.5 max-w-2xl">
+                <p className="text-sm text-white/80 mt-1.5 max-w-2xl">
                   {t.media.reelsSubheading}
                 </p>
               </div>
@@ -267,24 +267,24 @@ export default function MediaAndKitchenPage() {
         </section>
 
         {/* SECTION 2: Shoppable Chef Recipes with One-Tap "Add All to Bag" */}
-        <section id="recipes" className="py-16 sm:py-24 bg-[#F4ECE0]/60 border-y border-[#E7DAC8]">
+        <section id="recipes" className="py-16 sm:py-24 bg-transparent border-y border-white/12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
               <div>
-                <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#6B1713] font-bold font-montserrat mb-1.5">
+                <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#A8D5B5] font-bold font-montserrat mb-1.5">
                   <ChefHat className="w-4 h-4" />
                   <span>Direct Catalog Recipe Kits</span>
                 </div>
-                <h2 className="font-montserrat text-2xl sm:text-3xl font-bold text-[#35160E]">
+                <h2 className="font-montserrat text-2xl sm:text-3xl font-bold text-white">
                   {t.media.recipesHeading}
                 </h2>
-                <p className="text-sm text-[#35160E]/75 mt-1.5 max-w-2xl">
+                <p className="text-sm text-white/80 mt-1.5 max-w-2xl">
                   {t.media.recipesSubheading}
                 </p>
               </div>
 
               {/* Filter Tabs */}
-              <div className="inline-flex items-center gap-1 p-1.5 rounded-2xl bg-[#FAF4E8] border border-[#E7DAC8] shadow-xs overflow-x-auto max-w-full scrollbar-none">
+              <div className="inline-flex items-center gap-1 p-1.5 rounded-2xl bg-white/95 border border-white/25 shadow-md overflow-x-auto max-w-full scrollbar-none">
                 {recipeCategories.map((cat) => {
                   const active = recipeFilter === cat;
                   return (
@@ -318,7 +318,7 @@ export default function MediaAndKitchenPage() {
                 return (
                   <article
                     key={recipe.id}
-                    className="bg-[#FAF4E8] rounded-3xl border border-[#E7DAC8] shadow-sm overflow-hidden flex flex-col justify-between"
+                    className="bg-white text-[#35160E] rounded-3xl border border-white/25 shadow-[0_18px_45px_-15px_rgba(0,0,0,0.38)] overflow-hidden flex flex-col justify-between"
                   >
                     <div>
                       {/* Top Dish Image */}
@@ -545,10 +545,10 @@ export default function MediaAndKitchenPage() {
           </div>
         </section>
 
-        {/* SECTION 3: Harvest & Milling Origin Documentary Clips (Botanical Forest Green Contrast Band) */}
+        {/* SECTION 3: Harvest & Milling Origin Documentary Clips */}
         <section
           id="harvest-clips"
-          className="py-16 sm:py-24 bg-gradient-to-br from-[#1B4328] via-[#235333] to-[#193C24] text-[#FAF4E8]"
+          className="py-16 sm:py-24 bg-transparent text-[#FAF4E8]"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl mb-10">
@@ -556,10 +556,10 @@ export default function MediaAndKitchenPage() {
                 <Sprout className="w-4 h-4" />
                 <span>Farm-to-Mill Transparency</span>
               </div>
-              <h2 className="font-montserrat text-2xl sm:text-3xl font-bold text-[#FAF4E8]">
+              <h2 className="font-montserrat text-2xl sm:text-3xl font-bold text-white">
                 {t.media.harvestHeading}
               </h2>
-              <p className="text-sm text-[#FAF4E8]/80 mt-1.5">
+              <p className="text-sm text-white/80 mt-1.5">
                 {t.media.harvestSubheading}
               </p>
             </div>
@@ -574,7 +574,7 @@ export default function MediaAndKitchenPage() {
                 return (
                   <article
                     key={clip.id}
-                    className="rounded-3xl bg-[#FAF4E8] text-[#35160E] border border-[#FAF4E8]/40 overflow-hidden flex flex-col justify-between shadow-lg hover:shadow-xl transition-all"
+                    className="rounded-3xl bg-white text-[#35160E] border border-white/25 overflow-hidden flex flex-col justify-between shadow-[0_18px_45px_-15px_rgba(0,0,0,0.38)] hover:shadow-[0_24px_54px_-15px_rgba(0,0,0,0.48)] transition-all"
                   >
                     <div>
                       <div className="relative aspect-4/3 overflow-hidden bg-[#EFE5D4]">

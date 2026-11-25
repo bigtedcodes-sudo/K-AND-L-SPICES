@@ -102,7 +102,7 @@ function ProductCard({
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.3 }}
       onClick={() => onSelectProduct && onSelectProduct(localized)}
-      className="group relative bg-[#FCF9F4] rounded-3xl p-5 sm:p-6 pt-21 border border-[#E7DAC8]/90 shadow-[0_8px_28px_-12px_rgba(53,22,14,0.08)] hover:shadow-[0_18px_38px_-12px_rgba(53,22,14,0.16)] hover:border-[#2C5E3B]/35 transition-all duration-300 flex flex-col justify-between cursor-pointer"
+      className="group relative bg-white rounded-3xl p-5 sm:p-6 pt-21 border border-white/25 shadow-[0_14px_34px_-12px_rgba(0,0,0,0.32)] hover:shadow-[0_22px_45px_-12px_rgba(0,0,0,0.45)] hover:border-[#A8D5B5] transition-all duration-300 flex flex-col justify-between cursor-pointer"
     >
       {/* Floating Parallax Platter with Per-Product Photo Carousel */}
       <motion.div
@@ -313,33 +313,33 @@ export function AnimatedCatalog({
   ];
 
   return (
-    <section id="catalog" className="py-20 md:py-28 bg-[#F4ECE0]/60 relative overflow-x-clip">
+    <section id="catalog" className="py-20 md:py-28 bg-transparent border-t border-white/12 relative overflow-x-clip">
       {/* Subtle background ambient kinetic elements */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-40 right-10 w-96 h-96 rounded-full bg-[#E7DAC8]/30 blur-3xl"
+        className="pointer-events-none absolute -top-40 right-10 w-96 h-96 rounded-full bg-white/5 blur-3xl"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-40 left-10 w-96 h-96 rounded-full bg-[#E7DAC8]/30 blur-3xl"
+        className="pointer-events-none absolute -bottom-40 left-10 w-96 h-96 rounded-full bg-[#6B1713]/15 blur-3xl"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <span className="text-xs uppercase tracking-widest text-[#6B1713] font-bold font-montserrat block mb-2">
+          <span className="text-xs uppercase tracking-widest text-[#A8D5B5] font-bold font-montserrat block mb-2">
             {t.catalog.tagline}
           </span>
-          <h2 className="font-montserrat text-3xl sm:text-4xl font-bold text-[#35160E] tracking-tight">
+          <h2 className="font-montserrat text-3xl sm:text-4xl font-bold text-white tracking-tight">
             {t.catalog.title}
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-[#35160E]/75 leading-relaxed">
+          <p className="mt-3 text-sm sm:text-base text-white/80 leading-relaxed">
             {t.catalog.description}
           </p>
 
           {/* Category Filter Tabs */}
           <div className="mt-8 flex items-center justify-center">
-            <div className="inline-flex items-center gap-1 sm:gap-1.5 p-1.5 bg-[#FAF4E8] rounded-2xl border border-[#E7DAC8] shadow-sm max-w-full overflow-x-auto scrollbar-none">
+            <div className="inline-flex items-center gap-1 sm:gap-1.5 p-1.5 bg-white/95 rounded-2xl border border-white/25 shadow-md max-w-full overflow-x-auto scrollbar-none">
               {categoryTabLabels.map((tab) => {
                 const isActive = activeCategory === tab.key;
                 return (
@@ -386,18 +386,18 @@ export function AnimatedCatalog({
         </motion.div>
 
         {/* Connected Media & Kitchen Discovery Bar */}
-        <div className="mt-14 p-6 sm:p-7 rounded-3xl bg-gradient-to-r from-[#1D462B] to-[#275A37] text-[#FAF4E8] border border-[#2C5E3B] shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="mt-14 p-6 sm:p-7 rounded-3xl bg-white/10 backdrop-blur-md text-white border border-white/20 shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <span className="text-[11px] uppercase tracking-widest font-bold text-[#A8D5B5] font-montserrat block">
               {t.media.kicker}
             </span>
-            <p className="text-sm sm:text-base font-bold text-[#FAF4E8] font-montserrat mt-0.5">
+            <p className="text-sm sm:text-base font-bold text-white font-montserrat mt-0.5">
               {t.media.reelsHeading} · {t.media.recipesHeading}
             </p>
           </div>
           <Link
             href="/media"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#6B1713] hover:bg-[#55120F] text-[#FAF4E8] text-xs font-bold font-montserrat shadow-md transition-all whitespace-nowrap shrink-0"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#6B1713] hover:bg-[#55120F] text-[#FAF4E8] text-xs font-bold font-montserrat shadow-md transition-all whitespace-nowrap shrink-0 border border-white/15"
           >
             <span>{t.nav.media}</span>
             <ArrowUpRight className="w-4 h-4" />

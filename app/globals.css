@@ -17,8 +17,8 @@
   }
 
   html, body {
-    background-color: #faf4e8;
-    color: #35160e;
+    background-color: #173a22;
+    color: #ffffff;
     font-family: var(--font-montserrat), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow-x: clip;
@@ -43,16 +43,16 @@
   animation: spinSlow 80s linear infinite;
 }
 
-/* Custom scrollbar for boutique culinary aesthetic */
+/* Custom scrollbar for botanical green & burgundy theme */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #faf4e8;
+  background: #14321d;
 }
 ::-webkit-scrollbar-thumb {
-  background: #e7dac8;
+  background: #2c5e3b;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {

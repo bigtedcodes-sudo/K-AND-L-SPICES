@@ -48,12 +48,12 @@ export function AboutSubpageShell({
   };
 
   return (
-    <div className="min-h-screen bg-white text-[#35160E] flex flex-col font-sans selection:bg-[#6B1713] selection:text-[#FAF4E8] overflow-x-clip">
+    <div className="min-h-screen bg-gradient-to-b from-[#173A22] via-[#215231] to-[#14321D] text-white flex flex-col font-sans selection:bg-[#6B1713] selection:text-[#FAF4E8] overflow-x-clip">
       <Navbar />
 
       <main className="flex-1">
-        {/* Top Editorial Banner — Botanical Forest Green Canvas */}
-        <section className="relative bg-gradient-to-br from-[#1B4328] via-[#245634] to-[#183B23] text-[#FAF4E8] border-b border-[#163620] py-12 sm:py-16 overflow-x-clip">
+        {/* Top Editorial Banner */}
+        <section className="relative bg-transparent text-[#FAF4E8] border-b border-white/12 py-12 sm:py-16 overflow-x-clip">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute -top-24 right-0 w-96 h-96 rounded-full bg-[#FAF4E8]/8 blur-3xl"
@@ -126,13 +126,13 @@ export function AboutSubpageShell({
           </div>
         </section>
 
-        {/* Main Sub-Page Content on Crisp White Canvas */}
-        <section className="py-14 sm:py-20 bg-white">
+        {/* Main Sub-Page Content over Continuous Green Canvas */}
+        <section className="py-14 sm:py-20 bg-transparent">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">{children}</div>
         </section>
 
         {/* Bottom Direct Fulfillment / Partnership Strip */}
-        <section className="py-12 bg-gradient-to-r from-[#1B4328] via-[#235333] to-[#193C24] text-[#FAF4E8] border-t border-[#163620]">
+        <section className="py-12 bg-white/8 backdrop-blur-xs text-[#FAF4E8] border-t border-white/15">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div className="max-w-2xl">
               <span className="text-[11px] uppercase tracking-widest text-[#A8D5B5] font-montserrat font-semibold block mb-1">
