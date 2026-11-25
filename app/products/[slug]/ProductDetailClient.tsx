@@ -72,84 +72,94 @@ export function ProductDetailClient({ product }: { product: ProductSKU }) {
   };
 
   return (
-    <div>
-      {/* Breadcrumb Navigation */}
-      <nav className="mb-8 flex items-center gap-2 text-xs text-[#35160E]/60">
-        <Link href="/" className="hover:text-[#2C5E3B] transition-colors flex items-center gap-1 font-medium">
-          <ArrowLeft className="w-3.5 h-3.5" />
-          <span>{t.productModal.backToCatalog}</span>
-        </Link>
-        <span>/</span>
-        <span>{localized.category}</span>
-        <span>/</span>
-        <span className="text-[#35160E] font-semibold">{localized.name}</span>
-      </nav>
+    <section className="relative bg-gradient-to-br from-[#1B4328] via-[#245634] to-[#183B23] text-[#FAF4E8] py-10 sm:py-14 md:py-16 overflow-x-clip">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-24 left-1/3 w-96 h-96 rounded-full bg-[#FAF4E8]/8 blur-3xl"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-24 right-0 w-80 h-80 rounded-full bg-[#6B1713]/20 blur-3xl"
+      />
 
-      {/* Contiguous Purchase Module Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-        {/* Left Column: Unified Studio Photo Carousel + Macro Lightbox */}
-        <div className="lg:col-span-7 space-y-5">
-          <ProductPhotoCarousel
-            key={localized.id}
-            images={images}
-            alt={localized.name}
-            packaging={localized.packaging}
-            origin={localized.origin}
-            aspectClass="aspect-square sm:aspect-4/3"
-            showThumbnails={true}
-            enableLightbox={true}
-            bottomLeftBadge={
-              <span className="px-3.5 py-1.5 rounded-full bg-[#6B1713] text-[#FAF4E8] text-xs font-bold uppercase tracking-wider font-montserrat shadow-md">
-                {localized.packaging}
-              </span>
-            }
-            bottomRightBadge={
-              <span className="text-xs text-[#FAF4E8] bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full font-medium">
-                {t.productModal.milledInNigeria}
-              </span>
-            }
-          />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Breadcrumb Navigation */}
+        <nav className="mb-8 flex flex-wrap items-center gap-2 text-xs text-[#FAF4E8]/75">
+          <Link href="/" className="hover:text-white transition-colors flex items-center gap-1 font-medium">
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>{t.productModal.backToCatalog}</span>
+          </Link>
+          <span className="text-[#FAF4E8]/40">/</span>
+          <span>{localized.category}</span>
+          <span className="text-[#FAF4E8]/40">/</span>
+          <span className="text-[#FAF4E8] font-semibold">{localized.name}</span>
+        </nav>
 
-          {/* Interactive Macro & Batch Inspection Callout Strip */}
-          <div className="px-4 py-3 rounded-2xl bg-[#EBF2EC]/65 border border-[#2C5E3B]/25 flex flex-wrap items-center justify-between gap-3 text-xs text-[#21482D]">
-            <div className="flex items-center gap-2 font-medium">
-              <ZoomIn className="w-4 h-4 text-[#2C5E3B] shrink-0" />
-              <span>
-                Click product frame above to inspect 3.5x spice granulation &amp; pouch batch codes
+        {/* Contiguous Purchase Module Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          {/* Left Column: Unified Studio Photo Carousel + Macro Lightbox */}
+          <div className="lg:col-span-7 space-y-5">
+            <ProductPhotoCarousel
+              key={localized.id}
+              images={images}
+              alt={localized.name}
+              packaging={localized.packaging}
+              origin={localized.origin}
+              aspectClass="aspect-square sm:aspect-4/3"
+              showThumbnails={true}
+              enableLightbox={true}
+              bottomLeftBadge={
+                <span className="px-3.5 py-1.5 rounded-full bg-[#6B1713] text-[#FAF4E8] text-xs font-bold uppercase tracking-wider font-montserrat shadow-md">
+                  {localized.packaging}
+                </span>
+              }
+              bottomRightBadge={
+                <span className="text-xs text-[#FAF4E8] bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full font-medium">
+                  {t.productModal.milledInNigeria}
+                </span>
+              }
+            />
+
+            {/* Interactive Macro & Batch Inspection Callout Strip */}
+            <div className="px-4 py-3 rounded-2xl bg-[#FAF4E8]/12 backdrop-blur-xs border border-[#FAF4E8]/25 flex flex-wrap items-center justify-between gap-3 text-xs text-[#FAF4E8]">
+              <div className="flex items-center gap-2 font-medium">
+                <ZoomIn className="w-4 h-4 text-[#A8D5B5] shrink-0" />
+                <span>
+                  Click product frame above to inspect 3.5x spice granulation &amp; pouch batch codes
+                </span>
+              </div>
+              <span className="font-montserrat font-bold uppercase tracking-wider text-[10px] text-[#A8D5B5]">
+                Warm Stone Studio · Macro Enabled
               </span>
             </div>
-            <span className="font-montserrat font-bold uppercase tracking-wider text-[10px] text-[#2C5E3B]">
-              Warm Stone Studio · Macro Enabled
-            </span>
+
+            {/* Sourcing & Provenance Card */}
+            <div className="p-6 rounded-2xl bg-[#FAF4E8] text-[#35160E] border border-[#FAF4E8]/40 shadow-md flex items-center justify-between">
+              <div>
+                <span className="text-[11px] text-[#35160E]/60 uppercase tracking-widest font-semibold block">
+                  {t.productModal.nativeOrigin}
+                </span>
+                <span className="text-sm font-bold text-[#35160E] mt-0.5 block">
+                  {localized.origin}
+                </span>
+              </div>
+              <div className="p-3 rounded-full bg-[#EBF2EC] border border-[#2C5E3B]/25 text-[#2C5E3B]">
+                <Compass className="w-5 h-5" />
+              </div>
+            </div>
           </div>
 
-          {/* Sourcing & Provenance Card */}
-          <div className="p-6 rounded-2xl bg-[#F4ECE0]/70 border border-[#E7DAC8] flex items-center justify-between">
+          {/* Right Column: Sticky Contiguous Purchase Module */}
+          <div className="lg:col-span-5 bg-[#FAF4E8] text-[#35160E] rounded-3xl p-6 sm:p-8 border border-[#FAF4E8]/40 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.38)] space-y-6 lg:sticky lg:top-24">
             <div>
-              <span className="text-[11px] text-[#35160E]/60 uppercase tracking-widest font-semibold block">
-                {t.productModal.nativeOrigin}
+              <span className="text-xs uppercase tracking-widest text-[#2C5E3B] font-bold font-montserrat block mb-1">
+                {localized.category}
               </span>
-              <span className="text-sm font-bold text-[#35160E] mt-0.5 block">
-                {localized.origin}
-              </span>
+              <h1 className="font-montserrat text-2xl sm:text-3xl font-bold text-[#35160E] leading-snug">
+                {localized.name}
+              </h1>
+              <p className="text-sm text-[#35160E]/75 italic mt-1">&ldquo;{localized.subtitle}&rdquo;</p>
             </div>
-            <div className="p-3 rounded-full bg-[#EBF2EC] border border-[#2C5E3B]/25 text-[#2C5E3B]">
-              <Compass className="w-5 h-5" />
-            </div>
-          </div>
-        </div>
-
-        {/* Right Column: Sticky Contiguous Purchase Module */}
-        <div className="lg:col-span-5 bg-[#FAF4E8] rounded-3xl p-6 sm:p-8 border border-[#E7DAC8] shadow-sm space-y-6 lg:sticky lg:top-28">
-          <div>
-            <span className="text-xs uppercase tracking-widest text-[#6B1713] font-bold font-montserrat block mb-1">
-              {localized.category}
-            </span>
-            <h1 className="font-montserrat text-2xl sm:text-3xl font-bold text-[#35160E] leading-snug">
-              {localized.name}
-            </h1>
-            <p className="text-sm text-[#35160E]/75 italic mt-1">&ldquo;{localized.subtitle}&rdquo;</p>
-          </div>
 
           {/* Price & Heat Index Bar */}
           <div className="flex items-center justify-between py-3.5 px-4 bg-[#F4ECE0] rounded-2xl border border-[#E7DAC8]">
@@ -275,6 +285,7 @@ export function ProductDetailClient({ product }: { product: ProductSKU }) {
           </div>
         </div>
       </div>
+      </div>
 
       {/* 'Quick Order via WhatsApp' Floating Action Button */}
       <motion.aside
@@ -311,6 +322,6 @@ export function ProductDetailClient({ product }: { product: ProductSKU }) {
           </span>
         </button>
       </motion.aside>
-    </div>
+    </section>
   );
 }

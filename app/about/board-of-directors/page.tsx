@@ -24,16 +24,16 @@ export default function BoardOfDirectorsPage() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45 }}
-          className="bg-[#F4ECE0]/85 rounded-3xl p-6 sm:p-8 border border-[#E7DAC8] flex flex-col md:flex-row items-start md:items-center gap-6"
+          className="bg-gradient-to-r from-[#1B4328] via-[#235333] to-[#193C24] text-[#FAF4E8] rounded-3xl p-6 sm:p-8 border border-[#2C5E3B] shadow-md flex flex-col md:flex-row items-start md:items-center gap-6"
         >
-          <div className="w-12 h-12 rounded-2xl bg-[#6B1713] text-[#FAF4E8] flex items-center justify-center shrink-0 shadow-sm">
+          <div className="w-12 h-12 rounded-2xl bg-[#6B1713] text-[#FAF4E8] flex items-center justify-center shrink-0 shadow-sm border border-[#FAF4E8]/20">
             <Landmark className="w-6 h-6" />
           </div>
           <div>
-            <h2 className="font-montserrat text-lg sm:text-xl font-bold text-[#35160E]">
+            <h2 className="font-montserrat text-lg sm:text-xl font-bold text-[#FAF4E8]">
               {data.charterTitle}
             </h2>
-            <p className="text-sm text-[#35160E]/80 leading-relaxed mt-1.5">
+            <p className="text-sm text-[#FAF4E8]/85 leading-relaxed mt-1.5">
               {data.charterText}
             </p>
           </div>
@@ -51,7 +51,7 @@ export default function BoardOfDirectorsPage() {
             >
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 rounded-2xl bg-[#35160E] text-[#FAF4E8] flex items-center justify-center font-montserrat text-xl font-bold shrink-0 shadow-md border-2 border-[#E7DAC8]">
+                  <div className="w-16 h-16 rounded-2xl bg-[#2C5E3B] text-[#FAF4E8] flex items-center justify-center font-montserrat text-xl font-bold shrink-0 shadow-md border-2 border-[#E7DAC8]">
                     {director.initials}
                   </div>
                   <div className="min-w-0">

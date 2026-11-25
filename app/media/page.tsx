@@ -104,58 +104,67 @@ export default function MediaAndKitchenPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FAF4E8] text-[#35160E] flex flex-col">
+    <div className="min-h-screen bg-white text-[#35160E] flex flex-col">
       <Navbar />
       <CartDrawer />
       <WhatsAppSimulator />
 
       <main className="flex-1">
-        {/* Hero Editorial Header */}
-        <section className="relative py-14 sm:py-20 bg-[#F4ECE0]/70 border-b border-[#E7DAC8] overflow-hidden">
+        {/* Hero Editorial Header — Deep Botanical Forest Green */}
+        <section className="relative py-14 sm:py-20 bg-gradient-to-br from-[#1B4328] via-[#245634] to-[#183B23] text-[#FAF4E8] border-b border-[#163620] overflow-hidden">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-24 right-0 w-96 h-96 rounded-full bg-[#FAF4E8]/8 blur-3xl"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -bottom-24 left-12 w-80 h-80 rounded-full bg-[#6B1713]/20 blur-3xl"
+          />
+
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
               <Link
                 href="/"
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#35160E]/70 hover:text-[#2C5E3B] transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#FAF4E8]/80 hover:text-white transition-colors"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
                 <span>{t.productModal.backToCatalog}</span>
               </Link>
 
-              <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-[#35160E]/75">
-                <a href="#prep-reels" className="hover:text-[#2C5E3B] transition-colors">
+              <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-[#FAF4E8]/85">
+                <a href="#prep-reels" className="hover:text-[#A8D5B5] transition-colors">
                   Prep Reels (4)
                 </a>
-                <span aria-hidden="true">·</span>
-                <a href="#recipes" className="hover:text-[#2C5E3B] transition-colors">
+                <span aria-hidden="true" className="text-[#FAF4E8]/40">·</span>
+                <a href="#recipes" className="hover:text-[#A8D5B5] transition-colors">
                   Shoppable Recipes (4)
                 </a>
-                <span aria-hidden="true">·</span>
-                <a href="#harvest-clips" className="hover:text-[#2C5E3B] transition-colors">
+                <span aria-hidden="true" className="text-[#FAF4E8]/40">·</span>
+                <a href="#harvest-clips" className="hover:text-[#A8D5B5] transition-colors">
                   Harvest Documentary (3)
                 </a>
               </div>
             </div>
 
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EBF2EC] border border-[#2C5E3B]/25 text-[#2C5E3B] text-xs font-bold uppercase tracking-widest font-montserrat mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAF4E8]/12 border border-[#FAF4E8]/25 text-[#A8D5B5] text-xs font-bold uppercase tracking-widest font-montserrat mb-4">
                 <Film className="w-3.5 h-3.5" />
                 <span>{t.media.kicker}</span>
               </div>
 
-              <h1 className="font-montserrat text-3xl sm:text-5xl font-bold text-[#35160E] tracking-tight leading-tight text-balance">
+              <h1 className="font-montserrat text-3xl sm:text-5xl font-bold text-[#FAF4E8] tracking-tight leading-tight text-balance">
                 {t.media.title}
               </h1>
 
-              <p className="mt-4 text-sm sm:text-base text-[#35160E]/80 leading-relaxed max-w-2xl">
+              <p className="mt-4 text-sm sm:text-base text-[#FAF4E8]/85 leading-relaxed max-w-2xl">
                 {t.media.subtitle}
               </p>
             </div>
           </div>
         </section>
 
-        {/* SECTION 1: Vertical 15-Second Culinary & Milling Reels */}
-        <section id="prep-reels" className="py-16 sm:py-20 bg-[#FAF4E8]">
+        {/* SECTION 1: Vertical 15-Second Culinary & Milling Reels (Crisp White Canvas) */}
+        <section id="prep-reels" className="py-16 sm:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
               <div>
@@ -285,7 +294,7 @@ export default function MediaAndKitchenPage() {
                       onClick={() => setRecipeFilter(cat)}
                       className={`px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap shrink-0 transition-all ${
                         active
-                          ? 'bg-[#2C5E3B] text-[#FAF4E8] shadow-xs'
+                          ? 'bg-[#6B1713] text-[#FAF4E8] shadow-xs'
                           : 'text-[#35160E]/75 hover:text-[#2C5E3B]'
                       }`}
                     >
@@ -536,18 +545,21 @@ export default function MediaAndKitchenPage() {
           </div>
         </section>
 
-        {/* SECTION 3: Harvest & Milling Origin Documentary Clips */}
-        <section id="harvest-clips" className="py-16 sm:py-24 bg-[#FAF4E8]">
+        {/* SECTION 3: Harvest & Milling Origin Documentary Clips (Botanical Forest Green Contrast Band) */}
+        <section
+          id="harvest-clips"
+          className="py-16 sm:py-24 bg-gradient-to-br from-[#1B4328] via-[#235333] to-[#193C24] text-[#FAF4E8]"
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl mb-10">
-              <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#2C5E3B] font-bold font-montserrat mb-1.5">
+              <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#A8D5B5] font-bold font-montserrat mb-1.5">
                 <Sprout className="w-4 h-4" />
                 <span>Farm-to-Mill Transparency</span>
               </div>
-              <h2 className="font-montserrat text-2xl sm:text-3xl font-bold text-[#35160E]">
+              <h2 className="font-montserrat text-2xl sm:text-3xl font-bold text-[#FAF4E8]">
                 {t.media.harvestHeading}
               </h2>
-              <p className="text-sm text-[#35160E]/75 mt-1.5">
+              <p className="text-sm text-[#FAF4E8]/80 mt-1.5">
                 {t.media.harvestSubheading}
               </p>
             </div>
@@ -562,7 +574,7 @@ export default function MediaAndKitchenPage() {
                 return (
                   <article
                     key={clip.id}
-                    className="rounded-3xl bg-[#F4ECE0]/70 border border-[#E7DAC8] overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-md transition-all"
+                    className="rounded-3xl bg-[#FAF4E8] text-[#35160E] border border-[#FAF4E8]/40 overflow-hidden flex flex-col justify-between shadow-lg hover:shadow-xl transition-all"
                   >
                     <div>
                       <div className="relative aspect-4/3 overflow-hidden bg-[#EFE5D4]">
@@ -575,7 +587,7 @@ export default function MediaAndKitchenPage() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                         <div className="absolute bottom-3 left-3.5 right-3.5 flex items-center justify-between text-[11px] font-semibold text-[#FAF4E8]">
                           <span>{clip.duration}</span>
-                          <span className="bg-[#2C5E3B] px-2.5 py-0.5 rounded-lg font-montserrat">
+                          <span className="bg-[#2C5E3B] px-2.5 py-0.5 rounded-lg font-montserrat shadow-xs">
                             {clip.metricBadge}
                           </span>
                         </div>
@@ -598,7 +610,7 @@ export default function MediaAndKitchenPage() {
                       <div className="px-6 pb-6 pt-3 border-t border-[#E7DAC8]">
                         <Link
                           href={`/products/${linkedProduct.slug}`}
-                          className="w-full flex items-center justify-between px-4 py-2.5 rounded-xl bg-[#FAF4E8] hover:bg-[#2C5E3B] hover:text-[#FAF4E8] text-[#2C5E3B] border border-[#2C5E3B]/30 text-xs font-bold transition-all font-montserrat"
+                          className="w-full flex items-center justify-between px-4 py-2.5 rounded-xl bg-[#6B1713] hover:bg-[#55120F] text-[#FAF4E8] text-xs font-bold transition-all font-montserrat shadow-xs"
                         >
                           <span>Inspect {linkedProduct.name}</span>
                           <ArrowUpRight className="w-4 h-4" />

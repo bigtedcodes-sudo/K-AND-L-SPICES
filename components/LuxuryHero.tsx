@@ -113,22 +113,29 @@ export function LuxuryHero() {
                 className="absolute inset-0 rounded-full border border-[#FAF4E8]/20 pointer-events-none"
               />
 
-              {/* Central Inertial Spring Platter */}
-              <motion.div
-                className="relative w-[210px] h-[210px] min-[390px]:w-[255px] min-[390px]:h-[255px] sm:w-[330px] sm:h-[330px] md:w-[365px] md:h-[365px] rounded-full p-2 sm:p-2.5 bg-[#FAF4E8] border border-[#E7DAC8] shadow-[0_24px_60px_-15px_rgba(0,0,0,0.42)] flex items-center justify-center cursor-grab active:cursor-grabbing select-none"
-                animate={{ rotate: rotationAngle }}
-                transition={{
-                  type: 'spring',
-                  stiffness: 120,
-                  damping: 20,
-                  mass: 0.8,
-                }}
-              >
-                {/* Earthenware Plate Rim Texture */}
+              {/* Central Inertial Spring Platter — Rotating Rim + Always-Upright Spice Studio Frame */}
+              <div className="relative w-[210px] h-[210px] min-[390px]:w-[255px] min-[390px]:h-[255px] sm:w-[330px] sm:h-[330px] md:w-[365px] md:h-[365px] rounded-full p-2 sm:p-2.5 flex items-center justify-center select-none">
+                {/* Rotating Earthenware Plate Rim (rolls tactilely while product photo stays upright) */}
+                <motion.div
+                  aria-hidden="true"
+                  className="absolute inset-0 rounded-full bg-[#FAF4E8] border border-[#E7DAC8] shadow-[0_24px_60px_-15px_rgba(0,0,0,0.42)] pointer-events-none"
+                  animate={{ rotate: rotationAngle }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 120,
+                    damping: 20,
+                    mass: 0.8,
+                  }}
+                >
+                  <div className="absolute inset-1.5 rounded-full border border-dashed border-[#D8C5AA]/75" />
+                  <span className="absolute top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#6B1713]/75" />
+                </motion.div>
+
+                {/* Upright Earthenware Plate Center (Never rotates upside down) */}
                 <div
                   onClick={() => setLightboxOpen(true)}
                   title="Click to inspect in 3.5x Macro Studio Lightbox"
-                  className="w-full h-full rounded-full overflow-hidden border-3 sm:border-4 border-[#FAF4E8] relative shadow-inner bg-[radial-gradient(circle_at_center,#FAF4E8_0%,#EFE5D4_70%,#E4D5BF_100%)] cursor-zoom-in group"
+                  className="relative z-10 w-full h-full rounded-full overflow-hidden border-3 sm:border-4 border-[#FAF4E8] shadow-inner bg-[radial-gradient(circle_at_center,#FAF4E8_0%,#EFE5D4_70%,#E4D5BF_100%)] cursor-zoom-in group"
                 >
                   <AnimatePresence mode="wait">
                     <motion.div
@@ -136,7 +143,7 @@ export function LuxuryHero() {
                       initial={{ opacity: 0, scale: 0.94 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 1.04 }}
-                      transition={{ duration: 0.35 }}
+                      transition={{ duration: 0.3 }}
                       className={`w-full h-full relative flex items-center justify-center ${
                         activeSlide?.backdrop === 'cutout' ? 'p-5 sm:p-8' : ''
                       }`}
@@ -166,7 +173,7 @@ export function LuxuryHero() {
                     <span>Macro Zoom</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Single Clean Blend Selector Row + Optional Angle Toggle */}

@@ -5,6 +5,7 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { CartDrawer } from '@/components/CartDrawer';
 import { WhatsAppSimulator } from '@/components/WhatsAppSimulator';
+import { FarmToKitchenStrip } from '@/components/FarmToKitchenStrip';
 import { ProductDetailClient } from './ProductDetailClient';
 
 interface Props {
@@ -52,10 +53,11 @@ export default async function ProductDetailPage({ params }: Props) {
   }
 
   return (
-    <div className="min-h-screen bg-[#FAF4E8] text-[#35160E] flex flex-col font-sans selection:bg-[#6B1713] selection:text-[#FAF4E8]">
+    <div className="min-h-screen bg-white text-[#35160E] flex flex-col font-sans selection:bg-[#6B1713] selection:text-[#FAF4E8] overflow-x-clip">
       <Navbar />
-      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 w-full">
+      <main className="flex-1">
         <ProductDetailClient product={product} />
+        <FarmToKitchenStrip />
       </main>
       <Footer />
       <CartDrawer />
